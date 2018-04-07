@@ -25,6 +25,6 @@ def url_healthcheck():
                     print(name  + ' has no www record')
                     print('----------')
     namefile.close()
-    print('Check complete \n')
+    print('\nCheck complete \n')
 
 url_healthcheck()
