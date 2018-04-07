@@ -9,16 +9,16 @@ def url_healthcheck():
     print('----------')
     for name in namefile:
         try:
-            r = requests.get('https://' + name.strip(), timeout=7)
+            requests.get('https://' + name.strip(), timeout=7)
         except requests.exceptions.Timeout:
             print(name + ' timed out')
             print('----------')
         except requests.exceptions.RequestException:
             try:
-                ip = socket.gethostbyname(name.strip())
+                socket.gethostbyname(name.strip())
             except socket.error:
                 try:
-                    ip = socket.gethostbyname('www.' + name.strip())
+                    socket.gethostbyname('www.' + name.strip())
                     print(name + ' no CNAME for www')
                     print('----------')
                 except socket.error:
