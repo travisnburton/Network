@@ -1,5 +1,3 @@
-##!/usr/bin/python3.6.3
-
 import socket
  
 mydict = {}
