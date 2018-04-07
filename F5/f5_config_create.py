@@ -3,7 +3,7 @@
 import socket
 # Create dictionary 
 mydict = {}
-inputpath = input('Provide path to input file (list of fqdn): ')
+inputpath = input('Provide path to input file (list of domain names): ')
 namefile = open(inputpath,"r")
 
 for name in namefile:
