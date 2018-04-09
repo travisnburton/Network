@@ -3,7 +3,7 @@ import socket
 
 def url_healthcheck():
     list_of_names = input('Enter path to file containing list of domain names: ')
-    namefile = open(str(list_of_names),"r")
+    namefile = open(list_of_names,"r")
     print('\nChecking list of domain names, only errors will be shown below')
     print('----------')
     for name in namefile:
