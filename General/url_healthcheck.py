@@ -8,7 +8,7 @@ def url_healthcheck():
     print('----------')
     for name in namefile:
         try:
-            requests.get('https://' + name.strip(), timeout=7)
+            requests.get('https://' + name.strip(), timeout=12)
         except requests.exceptions.Timeout:
             print(name + ' timed out')
             print('----------')
